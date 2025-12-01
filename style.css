@@ -11,6 +11,18 @@
 
   * { box-sizing: border-box; }
 
+/*nav bar*/
+nav a {
+  text-decoration: none;
+  color: #8a643c;
+}
+
+nav a.active {
+  color: #7e7d23;
+  font-weight: 700;
+}
+
+
 /*home page*/
   html, body {
     margin: 0;
@@ -66,15 +78,15 @@
     font-weight: 700
   }
 
-  nav a[href="#home"] {
-    color:#7e7d23;
-    font-weight: 700;
-  }
+nav a {
+  text-decoration: none;
+  color: #8a643c;    
+}
 
+nav a.active {
+  font-weight: 700;
+}
 
-  nav a {
-    text-decoration: none;
-  }
 
 /* Buttons */
 
@@ -134,7 +146,7 @@
   .home-row {
     width: 100%;
     margin: 0 0 0px;                
-    padding: 56px 100px;              
+    padding: 80px 100px;              
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 0px;
@@ -150,9 +162,11 @@
   }
 
   .home-text .eyebrow {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     letter-spacing: 0.15em;
+    color:#8a643c;
     text-transform: uppercase;
+    font-weight: 700;
     margin: 0 0 8px;
   }
 
@@ -247,4 +261,32 @@
     justify-self: center;
     max-width: 260px;
   }
+}
+
+
+/*menu page*/
+.menu-page {
+  padding: 40px 40px 60px;
+  background: var(--bg);
+}
+
+.menu-page h1 {
+  font-family: 'Poppins', system-ui, sans-serif;
+  color:#8a643c;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.menu-images {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.menu-images img {
+  max-width: 800px;    
+  width: 100%;
+  height: auto;
 }
