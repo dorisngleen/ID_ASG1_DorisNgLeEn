@@ -63,8 +63,8 @@
         </form>
       </div>
 
-    </div> <!-- close contact-layout -->
-  </section> <!-- close contact-strip -->
+    </div> 
+  </section> 
 
   <!-- footer block (outside contact section) -->
   <section class="home-footer-block">
@@ -81,11 +81,10 @@
 
 <script>
   const form = document.getElementById('contact-form');
-  const msg  = document.getElementById('contact-message');
-
   form.addEventListener('submit', function (event) {
-    event.preventDefault(); 
-    msg.textContent = 'Thank you! Your message has been sent.'; 
+    event.preventDefault();
+    alert('Thank you! Your message has been sent.');
+    form.reset();
   });
 </script>
 

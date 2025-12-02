@@ -325,13 +325,20 @@ nav a.active {
 
 .contact-copy p {
   margin: 0 0 10px;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .contact-note {
   font-size: 0.85rem;
 }
+
+.contact-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #3f5c25;         
+}
+
 
 /* form card */
 
@@ -349,28 +356,32 @@ nav a.active {
 .contact-form-card label {
   display: grid;
   gap: 4px;
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 0.85rem;      
+  color: #4a3b2a;
 }
 
 .contact-form-card input[type="text"],
 .contact-form-card input[type="email"],
+.contact-form-card input[type="tel"],
+.contact-form-card input[type="file"],
+.contact-form-card select,
 .contact-form-card textarea {
-  width: 100%;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc1ac;
-  background: #fdf7ec;
-  font: inherit;
-}
-
-.contact-form-card textarea {
-  min-height: 100px;
-  resize: vertical;
+  font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
 }
 
 .contact-submit {
-  margin-top: 8px;
-  width: 100%;
-  text-align: center;
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.contact-message {
+  margin-top: 10px;
+  font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  color: #3f5c25;
 }
 
 /* logo + socials footer */
@@ -398,10 +409,136 @@ nav a.active {
   font-size: 0.9rem;
 }
 
+.attach-row {
+  font-size: 0.85rem;
+}
+
 .contact-message {
   margin-top: 10px;
   font-size: 0.9rem;
-  color:#7e7d23
+  color: #3f5c25;
+}
+
+/*join us page*/
+
+.join-hero {
+  width: 100%;
+  max-height: 800px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.join-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* beige strip with text + form */
+.contact-strip {
+  background: var(--bg-alt);
+  padding: 0px 0 0px;
+}
+
+.contact-layout {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: flex-start;
+  background: #d9dcd3;
+}
+
+/* left copy block */
+.contact-copy .eyebrow {
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.contact-copy h1 {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 4.5rem;
+  margin: 0 0 12px;
+}
+
+.contact-copy p {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.join-positions {
+  margin-top: 12px;
+  font-size: 4rem;
+}
+
+/* right form card */
+.contact-form-card form {
+  display: grid;
+  gap: 10px;
+  font-size: 1.5rem;         
+}
+
+.contact-form-card label {
+  display: grid;
+  gap: 4px;
+  font-size: 1.5rem;         
+}
+
+.contact-form-card input[type="text"],
+.contact-form-card input[type="email"],
+.contact-form-card input[type="tel"],
+.contact-form-card input[type="file"],
+.contact-form-card select,
+.contact-form-card textarea {
+  background: #fdf7ec;
+  border: 1px solid #ccc1ac;
+  font-size: 1.5rem;         
+}
+
+.contact-form-card textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.attach-row {
+  font-size: 3rem;
+}
+
+.contact-submit {
+  margin-top: 6px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-message {
+  margin-top: 10px;
+  font-size: 7;
+  color: #3f5c25;
+}
+
+.contact-form-card select {
+  appearance: none;         
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: #fdf7ec; 
+  color: #4a3b2a;
+  padding-right: 32px;     
+}
+
+
+/* responsive */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+  }
 }
 
 /* responsive */
@@ -411,4 +548,103 @@ nav a.active {
     grid-template-columns: 1fr;
     padding: 24px 20px;
   }
+}
+
+/* MERCH PAGE */
+/* hero image */
+.merch-hero {
+  width: 100%;
+  max-height: 420px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.merch-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* merch section */
+.merch-page {
+  background: var(--bg-alt);
+  padding: 40px 40px 60px;
+}
+
+.merch-page h1 {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 2rem;
+  margin: 0 0 24px;
+}
+
+/* grid of 12 items */
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 24px;
+}
+
+/* product cards */
+.merch-card {
+  background: #e1ddcf;
+  padding: 14px 14px 18px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.85rem;
+}
+
+.merch-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.merch-card h2 {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 0.95rem;
+  margin: 0 0 4px;
+}
+
+.merch-card .price {
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+/* sold out label under price */
+.sold-tag {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #b05050;
+  font-weight: 600;
+}
+
+/* color dots */
+.swatches {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.dot-green  { background: #7a8b4a; }
+.dot-blue   { background: #75a0c8; }
+.dot-pink   { background: #d79aa7; }
+.dot-yellow { background: #e5cf78; }
+
+@media (max-width: 900px) {
+  .merch-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .merch-grid {
+    grid-template-columns: 1fr;          
+}
 }
