@@ -42,7 +42,7 @@
 
     <div class="merch-grid">
 
-      <a class="merch-card" href="bear.html">
+      <a class="merch-card sold-out" href="bear.html">
         <img src="photos/merch/bear/bear.png" alt="OH MY OAT Teddy Bear">
         <h2>OH MY OAT Teddy Bear</h2>
         <p class="price">$20.00</p>
@@ -127,7 +127,7 @@
         </div>
       </a>
 
-      <a class="merch-card" href="plastic.html">
+      <a class="merch-card sold-out" href="plastic.html">
         <img src="photos/merch/plastic/blue.png" alt="OH MY OAT Bottle">
         <h2>OH MY OAT Bottle</h2>
         <p class="price">$15.00</p>
@@ -172,6 +172,17 @@
     </div>
   </section>
 </main>
+
+<script>
+  const soldCards = document.querySelectorAll('.merch-card.sold-out');
+
+  soldCards.forEach(card => {
+    card.addEventListener('click', function (event) {
+      event.preventDefault(); // don’t go to product page
+      alert('Sorry, this item is sold out!\nNext restock: 15/12/2025');
+    });
+  });
+</script>
 
 </body>
 </html>
