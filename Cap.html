@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OH MY OAT Cap</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="home-header">
+  <div class="nav-inner">
+    <div class="logo-wrap">
+      <a href="index.html">
+        <img src="photos/logo.png" class="logo-img" alt="Oh My Oat logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="merch-page">
+  <div class="merch-gallery">
+    <button class="merch-arrow left" onclick="prevImage()">&lt;</button>
+    <button class="merch-arrow right" onclick="nextImage()">&gt;</button>
+
+    <div class="merch-thumbs">
+      <img src="photos/merch/cap/person.png" alt="" onclick="goToImage(0)" class="active">
+      <img src="photos/merch/cap/blue.png"   alt="" onclick="goToImage(1)">
+      <img src="photos/merch/cap/pink.png"   alt="" onclick="goToImage(2)">
+      <img src="photos/merch/cap/yellow.png" alt="" onclick="goToImage(3)">
+      <img src="photos/merch/cap/green.png"  alt="" onclick="goToImage(4)">
+    </div>
+
+    <img id="main-img" src="photos/merch/cap/person.png" alt="OH MY OAT Cap">
+  </div>
+
+  <div class="merch-info">
+    <h1>OH MY OAT Cap</h1>
+    <div class="merch-price">$18</div>
+
+    <div class="color-label">Colour</div>
+    <div class="color-swatches">
+      <div class="swatch blue"   onclick="setColor('blue',1)"></div>
+      <div class="swatch pink"   onclick="setColor('pink',2)"></div>
+      <div class="swatch yellow" onclick="setColor('yellow',3)"></div>
+      <div class="swatch green"  onclick="setColor('green',4)"></div>
+    </div>
+
+    <button class="add-cart-btn">Add to cart</button>
+  </div>
+</main>
+
+<script>
+const images = [
+  "photos/merch/cap/person.png",
+  "photos/merch/cap/blue.png",
+  "photos/merch/cap/pink.png",
+  "photos/merch/cap/yellow.png",
+  "photos/merch/cap/green.png"
+];
+let currentIndex = 0;
+
+function updateMainImage() {
+  document.getElementById("main-img").src = images[currentIndex];
+  document.querySelectorAll(".merch-thumbs img").forEach((t,i)=>{
+    t.classList.toggle("active", i === currentIndex);
+  });
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateMainImage();
+}
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateMainImage();
+}
+function goToImage(i) {
+  currentIndex = i;
+  updateMainImage();
+}
+function setColor(colorName, idx) {
+  currentIndex = idx;
+  updateMainImage();
+  document.querySelectorAll(".swatch").forEach(s=>s.classList.remove("active"));
+  document.querySelector(".swatch."+colorName).classList.add("active");
+}
+</script>
+</body>
+</html>
