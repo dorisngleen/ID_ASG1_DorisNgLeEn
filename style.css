@@ -205,22 +205,22 @@ nav a.active {
     object-fit: cover;
   }
 
-/* FOOTER BANNER */
-
 .home-footer-block {
   background: #fdf7ec;
   padding: 40px 20px 56px;
 }
 
 .footer-logo-stack {
-  max-width: 260px;
+  max-width: 1100px;    
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .footer-logo {
   max-width: 300px;
-  margin: 0 auto 16px;
+  margin: 0 16px 0 0;
 }
 
 .social-list {
@@ -228,6 +228,7 @@ nav a.active {
   flex-direction: column;
   gap: 4px;
   font-size: 1.5rem;
+  align-items: center;
 }
 
 /* Responsive */
@@ -541,112 +542,130 @@ nav a.active {
   }
 }
 
-/* responsive */
+/* Merch Page */
 
-@media (max-width: 900px) {
-  .contact-layout {
-    grid-template-columns: 1fr;
-    padding: 24px 20px;
-  }
-}
-
-/* MERCH PAGE */
-/* hero image */
-.merch-hero {
-  width: 100%;
-  max-height: 420px;
-  overflow: hidden;
-  background: #ddd;
-}
-
+/* hero */
 .merch-hero img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: block;
 }
 
-/* merch section */
+/* section */
 .merch-page {
-  background: var(--bg-alt);
-  padding: 40px 40px 60px;
+  max-width: 100%;
+  margin: 32px auto 80px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .merch-page h1 {
-  font-family: 'Poppins', system-ui, sans-serif;
-  font-size: 2rem;
-  margin: 0 0 24px;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 24px;
+  margin-bottom: 18px;
 }
 
-/* grid of 12 items */
+/* grid: equal gaps */
 .merch-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;            /* equal space between all cards */
 }
 
-/* product cards */
+@media (max-width: 800px) {
+  .merch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* card */
 .merch-card {
-  background: #e1ddcf;
-  padding: 14px 14px 18px;
+  background: #e0d6c5;
+  border-radius: 16px;
+  padding: 14px 14px 16px;
   text-decoration: none;
-  color: inherit;
-  font-size: 0.85rem;
+  color: #4e3a2b;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .merch-card img {
   width: 100%;
-  height: auto;
-  margin-bottom: 8px;
   display: block;
+  border-radius: 12px;
+  background: #d2c7b4;
 }
 
 .merch-card h2 {
-  font-family: 'Poppins', system-ui, sans-serif;
-  font-size: 0.95rem;
-  margin: 0 0 4px;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 1.4rem;
+  margin: 6px 0 0;
 }
 
 .merch-card .price {
-  margin: 0 0 6px;
-  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 0 4px;
 }
 
-/* sold out label under price */
-.sold-tag {
-  margin: 0;
-  font-size: 0.8rem;
-  color: #b05050;
-  font-weight: 600;
+.merch-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.06);
 }
 
-/* color dots */
+/* colour dots */
 .swatches {
   display: flex;
   gap: 6px;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
+.dot { width: 15px; height: 15px; border-radius: 50%; }
+.dot-green  { background: #9ebb73; }
+.dot-blue   { background: #96bedc; }
+.dot-pink   { background: #f1a9c0; }
+.dot-yellow { background: #f6d47c; }
+
+/* sold-out label */
+.sold-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(80,60,45,0.9);
+  padding: 3px 8px;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,0.1);
+  display: inline-block;
+  align-self: flex-start;
 }
 
-.dot-green  { background: #7a8b4a; }
-.dot-blue   { background: #75a0c8; }
-.dot-pink   { background: #d79aa7; }
-.dot-yellow { background: #e5cf78; }
 
-@media (max-width: 900px) {
-  .merch-grid {
-    grid-template-columns: repeat(2, 1fr); 
-  }
+/* footer block */
+.home-footer-block {
+.home-footer-block {
+  background: #fdf7ec;
+  border-radius: 0;
+  padding: 50px 20px 60px;
+  margin: 0;
 }
 
-@media (max-width: 600px) {
-  .merch-grid {
-    grid-template-columns: 1fr;          
+.footer-logo-stack {
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;           
+  flex-direction: column; 
+  align-items: center;    
 }
+
+.footer-logo {
+  max-width: 180px;
+  margin: 0 auto 18px;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
 }
 
 /*Product Page*/
@@ -658,12 +677,18 @@ body {
 }
 
 .merch-page {
+  max-width: none;
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px 7vw 80px;  
+  box-sizing: border-box;
+}
+
+.merch-page > h1,
+.merch-page > .merch-grid {
   max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .merch-gallery {

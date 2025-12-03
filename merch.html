@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <title>Oh My Oat Café – Merch</title>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="home-body">
-
 <header class="home-header">
   <div class="nav-inner">
     <div class="logo-wrap">
@@ -30,7 +32,6 @@
 </header>
 
 <main>
-
   <!-- hero image -->
   <section class="merch-hero">
     <img src="photos/merch/merch.png" alt="Oh My Oat merch hero">
@@ -42,13 +43,15 @@
 
     <div class="merch-grid">
 
-      <a class="merch-card sold-out" href="bear.html">
+      <!-- 1. Bear (SO) -->
+      <a class="merch-card sold-out" href="#">
         <img src="photos/merch/bear/bear.png" alt="OH MY OAT Teddy Bear">
         <h2>OH MY OAT Teddy Bear</h2>
         <p class="price">$20.00</p>
         <p class="sold-tag">Sold Out</p>
       </a>
 
+      <!-- 2. Cap -->
       <a class="merch-card" href="cap.html">
         <img src="photos/merch/cap/person.png" alt="OH MY OAT Cap">
         <h2>OH MY OAT Cap</h2>
@@ -61,6 +64,7 @@
         </div>
       </a>
 
+      <!-- 3. Coaster -->
       <a class="merch-card" href="coaster.html">
         <img src="photos/merch/coaster/green.png" alt="OH MY OAT Coaster">
         <h2>OH MY OAT Coaster</h2>
@@ -73,6 +77,7 @@
         </div>
       </a>
 
+      <!-- 4. Flask -->
       <a class="merch-card" href="flask.html">
         <img src="photos/merch/flask/blue.png" alt="OH MY OAT Flask">
         <h2>OH MY OAT Flask</h2>
@@ -85,12 +90,14 @@
         </div>
       </a>
 
+      <!-- 5. Holder / Cup -->
       <a class="merch-card" href="holder.html">
         <img src="photos/merch/holder/cup.png" alt="OH MY OAT Cup">
         <h2>OH MY OAT Cup</h2>
         <p class="price">$7.00</p>
       </a>
 
+      <!-- 6. Mug -->
       <a class="merch-card" href="mug.html">
         <img src="photos/merch/mug/green.png" alt="OH MY OAT Mug">
         <h2>OH MY OAT Mug</h2>
@@ -103,8 +110,9 @@
         </div>
       </a>
 
+      <!-- 7. Mystery / Blind Coffee Bag -->
       <a class="merch-card" href="mystery.html">
-        <img src="photos/merch/mystery/pink.png" alt="OH MY OAT Blind Coffee Bag">
+        <img src="photos/merch/mystery/mystery.png" alt="OH MY OAT Blind Coffee Bag">
         <h2>OH MY OAT Blind Coffee Bag</h2>
         <p class="price">$15.00</p>
         <div class="swatches">
@@ -115,6 +123,7 @@
         </div>
       </a>
 
+      <!-- 8. Planner -->
       <a class="merch-card" href="planner.html">
         <img src="photos/merch/planner/green.png" alt="OH MY OAT Planner">
         <h2>OH MY OAT Planner</h2>
@@ -127,15 +136,17 @@
         </div>
       </a>
 
-      <a class="merch-card sold-out" href="plastic.html">
-        <img src="photos/merch/plastic/blue.png" alt="OH MY OAT Bottle">
+      <!-- 9. Plastic Bottle (SO) -->
+      <a class="merch-card sold-out" href="#">
+        <img src="photos/merch/plastic/plastic.png" alt="OH MY OAT Bottle">
         <h2>OH MY OAT Bottle</h2>
         <p class="price">$15.00</p>
         <p class="sold-tag">Sold Out</p>
       </a>
 
+      <!-- 10. Sweater -->
       <a class="merch-card" href="sweater.html">
-        <img src="photos/merch/sweater/person.png" alt="OH MY OAT Sweater">
+        <img src="photos/merch/sweater/green.png" alt="OH MY OAT Sweater">
         <h2>OH MY OAT Sweater</h2>
         <p class="price">$28.00</p>
         <div class="swatches">
@@ -146,12 +157,14 @@
         </div>
       </a>
 
+      <!-- 11. T‑shirt -->
       <a class="merch-card" href="tshirt.html">
         <img src="photos/merch/tshirt/person.png" alt="OH MY OAT T‑Shirt">
-        <h2>OH MY OAT T-Shirt</h2>
+        <h2>OH MY OAT T‑Shirt</h2>
         <p class="price">$24.00</p>
       </a>
 
+      <!-- 12. Tumbler Cup -->
       <a class="merch-card" href="tumbler.html">
         <img src="photos/merch/tumbler/cup.png" alt="OH MY OAT Tumbler Cup">
         <h2>OH MY OAT Tumbler Cup</h2>
@@ -160,8 +173,8 @@
 
     </div>
   </section>
-</main>
 
+  <!-- footer banner -->
   <section class="home-footer-block">
     <div class="footer-logo-stack">
       <img src="photos/logo.png" alt="Oh My Oat logo" class="footer-logo">
@@ -174,16 +187,15 @@
 </main>
 
 <script>
+  // sold‑out behaviour
   const soldCards = document.querySelectorAll('.merch-card.sold-out');
 
   soldCards.forEach(card => {
     card.addEventListener('click', function (event) {
-      event.preventDefault(); // don’t go to product page
-      alert('Sorry, this item is sold out!\nNext restock: 15/12/2025');
+      event.preventDefault();
+      alert('Sorry, this item is Sold Out\nNext Restock: 15 Dec 2025');
     });
   });
 </script>
-
 </body>
 </html>
-
