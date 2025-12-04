@@ -116,8 +116,8 @@
   });
 
     document.getElementById('addToCartBtn').addEventListener('click', () => {
-      const selectedSize = document.querySelector('.size-btn.active').dataset.size;
-      alert(`Added to cart!\nOH MY OAT Coaster x${quantity}`);
+      const quantity = document.getElementById('quantityInput').value;
+      alert(`Added to cart!\nOH MY OAT Coaster (${selectedSize}) x${quantity}`);
     });
 
 </script>
