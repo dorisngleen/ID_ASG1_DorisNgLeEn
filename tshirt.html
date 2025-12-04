@@ -35,29 +35,46 @@
   <section class="product-band">
     <div class="product-page">
 
-      <!-- left: gallery -->
-      <div class="product-gallery">
-        <div class="gallery-inner">
-          <button class="gallery-arrow left" onclick="prevImage()">&lt;</button>
+      <!-- LEFT COLUMN: image + size -->
+      <div class="product-main-row">
+        <div class="product-gallery">
+          <div class="gallery-inner">
+            <button class="gallery-arrow left" onclick="prevImage()">&lt;</button>
 
-          <img id="main-img" class="product-main-img"
-               src="photos/merch/tshirt/person.png"
-               alt="OH MY OAT T-Shirt">
+            <img id="main-img" class="product-main-img"
+                 src="photos/merch/tshirt/person.png"
+                 alt="OH MY OAT T-Shirt">
 
-          <button class="gallery-arrow right" onclick="nextImage()">&gt;</button>
+            <button class="gallery-arrow right" onclick="nextImage()">&gt;</button>
+          </div>
+
+          <div class="product-thumbs">
+            <img src="photos/merch/tshirt/person.png" alt="" onclick="goToImage(0)" class="active">
+            <img src="photos/merch/tshirt/t.png" alt="" onclick="goToImage(1)">
+            <img src="photos/merch/tshirt/tshirt.png" alt="" onclick="goToImage(2)">
+          </div>
         </div>
 
-        <div class="product-thumbs">
-          <img src="photos/merch/tshirt/person.png"  alt="" onclick="goToImage(0)" class="active">
-          <img src="photos/merch/tshirt/t.png"       alt="" onclick="goToImage(1)">
-          <img src="photos/merch/tshirt/tshirt.png"  alt="" onclick="goToImage(2)">
+        <div class="product-side">
+          <div class="size-row">
+            <span class="size-label">Size:</span>
+            <button class="size-btn selected">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+            <button class="size-btn">XXL</button>
+          </div>
         </div>
       </div>
 
-      <!-- right: info -->
+      <!-- RIGHT COLUMN: info -->
       <div class="product-info">
         <h1>OH MY OAT T-Shirt</h1>
         <div class="product-price">$24.00</div>
+
+        <div class="product-meta">
+          <span class="rating">★★★★☆ (13)</span>
+          <span class="viewers">24 people are viewing this right now</span>
+        </div>
 
         <div class="qty-row">
           <label for="qty">Quantity</label>
@@ -80,8 +97,6 @@
     </div>
   </section>
 </main>
-
-
 
 <script>
   const images = [
