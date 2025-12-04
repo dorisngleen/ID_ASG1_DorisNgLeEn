@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OH MY OAT Cap</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-body">
+  <a href="merch.html" class="back-btn">&lt;</a>
+  
+  <header class="home-header">
+    <div class="nav-inner">
+      <div class="logo-wrap">
+        <a href="index.html">
+          <img src="photos/logo.png" class="logo-img" alt="Oh My Oat logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="merch.html" class="active">Merch</a></li>
+          <li><a href="join.html">Join Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product section -->
+  <main class="product-container">
+    <!-- Gallery -->
+    <div class="product-gallery">
+      <div class="gallery-slides">
+        <div class="slide active">
+          <img src="photos/merch/cap/person.png">
+        </div>
+        <div class="slide">
+          <img src="photos/merch/cap/blue.png">
+        </div>
+        <div class="slide">
+          <img src="photos/merch/cap/green.png">
+        </div>
+        <div class="slide">
+          <img src="photos/merch/cap/pink.png">
+        </div>
+        <div class="slide">
+          <img src="photos/merch/cap/yellow.png">
+        </div>
+      </div>
+      <button class="gallery-nav prev" id="prevBtn">‹</button>
+      <button class="gallery-nav next" id="nextBtn">›</button>
+    </div>
+
+    <!-- Product info -->
+    <div class="product-info">
+      <h1 class="product-title">OH MY OAT Cap</h1>
+      <div class="product-price">$18.00</div>
+
+
+      <div class="product-variant">
+        <span class="variant-label">Style</span>
+        <div class="color-options">
+          <div class="color-btn color-green active" data-color="green"></div>
+          <div class="color-btn color-blue" data-color="blue"></div>
+          <div class="color-btn color-pink" data-color="pink"></div>
+          <div class="color-btn color-yellow" data-color="yellow"></div>
+        </div>
+      </div>
+    
+
+      <div class="quantity-section">
+        <span class="variant-label">Quantity</span>
+        <input type="number" class="quantity-input" id="quantityInput" value="1" min="1">
+      </div>
+      
+      <button class="add-to-cart" id="addToCartBtn" type="button">
+        Add to Cart
+      </button>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="home-footer-block">
+    <div class="footer-logo-stack">
+      <img src="photos/logo.png" alt="Oh My Oat logo" class="footer-logo">
+      <div class="social-list">
+        <span>@OhMyOat</span>
+        <span>IG · TikTok · WhatsApp</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+// Gallery Navigation
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+}
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+});
+
+document.getElementById('addToCartBtn').addEventListener('click', () => {
+  const quantity = document.getElementById('quantityInput').value;
+  alert(`Added to cart!\nOH MY OAT Cap x${quantity}`);
+});
+
+</script>

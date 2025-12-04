@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OH MY OAT Tumbler</title>
+  <title>OH MY OAT Coffee Blind Bag</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
@@ -38,13 +38,16 @@
     <div class="product-gallery">
       <div class="gallery-slides">
         <div class="slide active">
-          <img src="photos/merch/tumbler/cup.png" alt="OH MY OAT Tumbler - Front">
+          <img src="photos/merch/mystery/mystery.png" >
         </div>
         <div class="slide">
-          <img src="photos/merch/tumbler/tumbler.png" alt="OH MY OAT Tumbler - Side">
+          <img src="photos/merch/mystery/pink.png">
         </div>
         <div class="slide">
-          <img src="photos/merch/tumbler/cap.png" alt="OH MY OAT Tumbler - Lid">
+          <img src="photos/merch/mystery/yellow.png">
+        </div>
+        <div class="slide">
+          <img src="photos/merch/mystery/blue.png">
         </div>
       </div>
       <button class="gallery-nav prev" id="prevBtn">‹</button>
@@ -53,15 +56,17 @@
 
     <!-- Product info -->
     <div class="product-info">
-      <h1 class="product-title">OH MY OAT Tumbler Cup</h1>
-      <div class="product-price">$28.00</div>
+      <h1 class="product-title">OH MY OAT Blind Coffee Bag</h1>
+      <div class="product-price">$15.00</div>
 
+      
       <div class="product-variant">
-        <span class="variant-label">Size</span>
-        <div class="size-options">
-          <button class="size-btn active" data-size="S">500ml</button>
-          <button class="size-btn" data-size="M">750ml</button>
-          <button class="size-btn" data-size="L">1L</button>
+        <span class="variant-label">Style</span>
+        <div class="color-options">
+          <div class="color-btn color-green active" data-color="green"></div>
+          <div class="color-btn color-blue" data-color="blue"></div>
+          <div class="color-btn color-pink" data-color="pink"></div>
+          <div class="color-btn color-yellow" data-color="yellow"></div>
         </div>
       </div>
 
@@ -111,9 +116,8 @@
   });
 
     document.getElementById('addToCartBtn').addEventListener('click', () => {
-      const selectedSize = document.querySelector('.size-btn.active').dataset.size;
       const quantity = document.getElementById('quantityInput').value;
-      alert(`Added to cart!\nOH MY OAT Tumbler (${selectedSize}) x${quantity}`);
+      alert(`Added to cart!\nOH MY OAT Coffee Blind Bag x${quantity}`);
     });
 
 </script>

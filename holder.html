@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OH MY OAT Tumbler</title>
+  <title>OH MY OAT Cup Holder</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
@@ -38,13 +38,10 @@
     <div class="product-gallery">
       <div class="gallery-slides">
         <div class="slide active">
-          <img src="photos/merch/tumbler/cup.png" alt="OH MY OAT Tumbler - Front">
+          <img src="photos/merch/holder/holder.png" >
         </div>
         <div class="slide">
-          <img src="photos/merch/tumbler/tumbler.png" alt="OH MY OAT Tumbler - Side">
-        </div>
-        <div class="slide">
-          <img src="photos/merch/tumbler/cap.png" alt="OH MY OAT Tumbler - Lid">
+          <img src="photos/merch/holder/cup.png">
         </div>
       </div>
       <button class="gallery-nav prev" id="prevBtn">‹</button>
@@ -53,17 +50,8 @@
 
     <!-- Product info -->
     <div class="product-info">
-      <h1 class="product-title">OH MY OAT Tumbler Cup</h1>
-      <div class="product-price">$28.00</div>
-
-      <div class="product-variant">
-        <span class="variant-label">Size</span>
-        <div class="size-options">
-          <button class="size-btn active" data-size="S">500ml</button>
-          <button class="size-btn" data-size="M">750ml</button>
-          <button class="size-btn" data-size="L">1L</button>
-        </div>
-      </div>
+      <h1 class="product-title">OH MY OAT Cup Holder</h1>
+      <div class="product-price">$7.00</div>
 
       <div class="quantity-section">
         <span class="variant-label">Quantity</span>
@@ -88,32 +76,32 @@
   </footer>
 
   <script>
-  // Gallery Navigation
-  const slides = document.querySelectorAll('.slide');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  let currentIndex = 0;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-  }
+// Gallery Navigation
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
 
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(currentIndex);
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
   });
+}
 
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-  });
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+});
 
-    document.getElementById('addToCartBtn').addEventListener('click', () => {
-      const selectedSize = document.querySelector('.size-btn.active').dataset.size;
-      const quantity = document.getElementById('quantityInput').value;
-      alert(`Added to cart!\nOH MY OAT Tumbler (${selectedSize}) x${quantity}`);
-    });
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+});
+
+document.getElementById('addToCartBtn').addEventListener('click', () => {
+  const quantity = document.getElementById('quantityInput').value;
+  alert(`Added to cart!\nOH MY OAT Cup Holder x${quantity}`);
+});
 
 </script>
