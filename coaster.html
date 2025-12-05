@@ -38,16 +38,16 @@
     <div class="product-gallery">
       <div class="gallery-slides">
         <div class="slide active">
-          <img src="photos/merch/coaster/green.png">
+          <img src="photos/merch/coaster/green.png" alt="OH MY OAT Green Coaster">
         </div>
         <div class="slide">
-          <img src="photos/merch/coaster/blue.png">
+          <img src="photos/merch/coaster/blue.png" alt="OH MY OAT Green Coaster">
         </div>
         <div class="slide">
-          <img src="photos/merch/coaster/pink.png">
+          <img src="photos/merch/coaster/pink.png" alt="OH MY OAT Green Coaster">
         </div>
         <div class="slide">
-          <img src="photos/merch/coaster/yellow.png">
+          <img src="photos/merch/coaster/yellow.png" alt="OH MY OAT Green Coaster">
         </div>
       </div>
       <button class="gallery-nav prev" id="prevBtn">‹</button>
@@ -78,7 +78,7 @@
       <button class="add-to-cart" id="addToCartBtn" type="button">
         Add to Cart
       </button>
-
+    </div>
   </main>
 
   <!-- Footer -->
@@ -117,7 +117,7 @@
 
     document.getElementById('addToCartBtn').addEventListener('click', () => {
       const quantity = document.getElementById('quantityInput').value;
-      alert(`Added to cart!\nOH MY OAT Coaster (${selectedSize}) x${quantity}`);
+      alert(`Added to cart!\nOH MY OAT Coaster x${quantity}`);
     });
 
 </script>

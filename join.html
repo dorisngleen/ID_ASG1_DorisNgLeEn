@@ -2,100 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Oh My Oat Café – Join Us</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oh My Oat Café - Join Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home-body">
-
-<header class="home-header">
-  <div class="nav-inner">
-    <div class="logo-wrap">
-      <a href="index.html">
-        <img src="photos/logo.png" class="logo-img" alt="Oh My Oat logo">
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="merch.html">Merch</a></li>
-        <li><a href="join.html" class="active">Join Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <!-- hero image -->
-  <section class="join-hero">
-    <img src="photos/contact/worker.png" alt="Oh My Oat team in front of café">
-  </section>
-
-  <!-- join strip -->
-  <section class="contact-strip">
-    <div class="contact-layout">
-
-      <div class="contact-copy">
-        <p class="eyebrow">We’re hiring!</p>
-        <h1>Multiple Positions Available</h1>
-        <p>We’re looking for warm, curious individuals who care about great drinks and great service. Whether you’re new to F&amp;B or already experienced, we’ll teach you everything you need to know and support you as you grow with our café.</p>
-        <p>Bring your energy, curiosity, and willingness to learn—we’ll provide the training, the oat lattes, and a supportive team.</p>
-
-        <p class="join-positions">
-          Positions available:<br>
-          • Commis Cook (Full‑Time)<br>
-          • Barista (Full‑Time / Part‑Time)<br>
-          • Service Crew (Part‑Time)
-        </p>
-      </div> 
-
-      <div class="contact-form-card">
-        <form id="join-form">
-          <label>
-            Name
-            <input type="text" placeholder="Type here..." required>
-          </label>
-
-          <label>
-            Email
-            <input type="email" placeholder="Type here..." required>
-          </label>
-
-          <label>
-            Phone
-            <input type="tel" placeholder="Type here..." required>
-          </label>
-
-          <label>
-            Position
-            <select required>
-              <option value="" disabled selected>Select a position</option>
-              <option>Commis Cook</option>
-              <option>Barista (Full‑Time)</option>
-              <option>Barista (Part‑Time)</option>
-              <option>Service Crew (Part‑Time)</option>
-            </select>
-          </label>
-
-          <label class="attach-row">
-            <span>Attach your résumé (PDF)</span>
-            <input type="file" accept="application/pdf">
-          </label>
-
-          <button type="submit" class="btn-filled contact-submit">Send</button>
-        </form>
+<body class="join-body">
+  <header class="home-header">
+    <div class="nav-inner">
+      <div class="logo-wrap">
+        <a href="index.html">
+          <img src="photos/logo.png" class="logo-img" alt="Oh My Oat logo">
+        </a>
       </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="join.html" class="active">Join Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    </div> 
-  </section>
+  <main>
+    <div class="join-hero">
+      <img src="photos/contact/worker.png" alt="Oh My Oat team in front of café" class="join-hero-img">
+    </div>
 
-  <!-- footer block -->
-  <section class="home-footer-block">
+    <section class="contact-strip">
+      <div class="contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">We're hiring!</p>
+          <h1>Multiple Positions Available</h1>
+          <p>We're looking for warm, curious individuals who care about great drinks and great service. Whether you're new to F&B or already experienced, we'll teach you everything you need to know and support you as you grow with our café.</p>
+          <p>Bring your energy, curiosity, and willingness to learn—we'll provide the training, the oat lattes, and a supportive team.</p>
+          <p class="join-positions">
+            Positions available:<br>
+            • Commis Cook (Full-Time)<br>
+            • Barista (Full-Time / Part-Time)<br>
+            • Service Crew (Part-Time)
+          </p>
+        </div> 
+
+        <div class="contact-form-card">
+          <form id="join-form">
+            <label>
+              Name
+              <input type="text" placeholder="Type here..." required>
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="Type here..." required>
+            </label>
+            <label>
+              Phone
+              <input type="tel" placeholder="Type here..." required>
+            </label>
+            <label>
+              Position
+              <select required>
+                <option value="" disabled selected>Select a position</option>
+                <option>Commis Cook</option>
+                <option>Barista (Full-Time)</option>
+                <option>Barista (Part-Time)</option>
+                <option>Service Crew (Part-Time)</option>
+              </select>
+            </label>
+            <label class="attach-row">
+              <span>Attach your résumé (PDF)</span>
+              <input type="file" accept="application/pdf">
+            </label>
+            <button type="submit" class="btn-filled contact-submit">Send</button>
+          </form>
+        </div>
+      </div> 
+    </section>
+  </main>
+
+  <footer class="home-footer-block">
+    <h2 class="visually-hidden">Contact Information</h2>
     <div class="footer-logo-stack">
       <img src="photos/logo.png" alt="Oh My Oat logo" class="footer-logo">
       <div class="social-list">
@@ -103,19 +92,15 @@
         <span>IG · TikTok · WhatsApp</span>
       </div>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<script>
-  const joinForm = document.getElementById('join-form');
-
-  joinForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    alert('Application sent! We will get back to you.');
-    joinForm.reset();
-  });
-</script>
-
+  <script>
+    const joinForm = document.getElementById('join-form');
+    joinForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Application sent! We will get back to you.');
+      joinForm.reset();
+    });
+  </script>
 </body>
 </html>

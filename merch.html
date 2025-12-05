@@ -2,57 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Oh My Oat Café – Merch</title>
-
-  <!-- Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oh My Oat Café - Merch</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home-body">
-<header class="home-header">
-  <div class="nav-inner">
-    <div class="logo-wrap">
-      <a href="index.html">
-        <img src="photos/logo.png" class="logo-img" alt="Oh My Oat logo">
-      </a>
+<body class="merch-body">
+  <!-- HEADER -->
+  <header class="home-header">
+    <div class="nav-inner">
+      <div class="logo-wrap">
+        <a href="index.html">
+          <img src="photos/logo.png" class="logo-img" alt="Oh My Oat logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="merch.html" class="active">Merch</a></li>
+          <li><a href="join.html">Join Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="merch.html" class="active">Merch</a></li>
-        <li><a href="join.html">Join Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <div class="merch-hero">
+    <img src="photos/merch/merch.png" alt="Oh My Oat merch collection" class="merch-hero-img">
   </div>
-</header>
 
-<main>
-  <!-- hero image -->
-  <section class="merch-hero">
-    <img src="photos/merch/merch.png" alt="Oh My Oat merch hero">
-  </section>
-
-  <!-- merch grid -->
-  <section class="merch-page">
-
+  <!-- MERCH GRID -->
+  <main class="merch-page">
     <div class="merch-header-row">
       <h1>Merch:</h1>
-      <a href="cart.html" class="merch-cart-btn">🛒 Cart</a>
+      <a href="cart.html" class="merch-cart-btn">🛒 Cart (0)</a>
     </div>
 
     <div class="merch-grid">
-
       <!-- 1. Bear (SO) -->
       <a class="merch-card sold-out" href="#">
         <img src="photos/merch/bear/bear.png" alt="OH MY OAT Teddy Bear">
+        <span class="sold-tag">Sold Out</span>
         <h2>OH MY OAT Teddy Bear</h2>
         <p class="price">$20.00</p>
-        <p class="sold-tag">Sold Out</p>
       </a>
 
       <!-- 2. Cap -->
@@ -143,9 +138,9 @@
       <!-- 9. Plastic Bottle (SO) -->
       <a class="merch-card sold-out" href="#">
         <img src="photos/merch/plastic/plastic.png" alt="OH MY OAT Bottle">
+        <span class="sold-tag">Sold Out</span>
         <h2>OH MY OAT Bottle</h2>
         <p class="price">$15.00</p>
-        <p class="sold-tag">Sold Out</p>
       </a>
 
       <!-- 10. Sweater -->
@@ -161,10 +156,10 @@
         </div>
       </a>
 
-      <!-- 11. T‑shirt -->
+      <!-- 11. T-Shirt -->
       <a class="merch-card" href="tshirt.html">
-        <img src="photos/merch/tshirt/person.png" alt="OH MY OAT T‑Shirt">
-        <h2>OH MY OAT T‑Shirt</h2>
+        <img src="photos/merch/tshirt/person.png" alt="OH MY OAT T-Shirt">
+        <h2>OH MY OAT T-Shirt</h2>
         <p class="price">$24.00</p>
       </a>
 
@@ -174,12 +169,12 @@
         <h2>OH MY OAT Tumbler Cup</h2>
         <p class="price">$18.00</p>
       </a>
-
     </div>
-  </section>
+  </main>
 
-  <!-- footer banner -->
-  <section class="home-footer-block">
+  <!-- FOOTER -->
+  <footer class="home-footer-block">
+    <h2 class="visually-hidden">Contact Information</h2>
     <div class="footer-logo-stack">
       <img src="photos/logo.png" alt="Oh My Oat logo" class="footer-logo">
       <div class="social-list">
@@ -187,19 +182,18 @@
         <span>IG · TikTok · WhatsApp</span>
       </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<script>
-  // sold‑out behaviour
-  const soldCards = document.querySelectorAll('.merch-card.sold-out');
-
-  soldCards.forEach(card => {
-    card.addEventListener('click', function (event) {
-      event.preventDefault();
-      alert('Sorry, this item is Sold Out\nNext Restock: 15 Dec 2025');
+  <!-- SCRIPT BEFORE </body> -->
+  <script>
+    // Sold-out behaviour
+    const soldCards = document.querySelectorAll('.merch-card.sold-out');
+    soldCards.forEach(card => {
+      card.addEventListener('click', function (event) {
+        event.preventDefault();
+        alert('Sorry, this item is Sold Out\nNext Restock: 15 Dec 2025');
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>

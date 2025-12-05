@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Oh My Oat Café – Contact Us</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oh My Oat Café - Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-body">
+
+<body class="contact-body">
   <header class="home-header">
     <div class="nav-inner">
       <div class="logo-wrap">
@@ -26,45 +28,39 @@
     </div>
   </header>
 
-<main>
+  <main>
+    <section class="contact-strip">
+      <div class="contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">Get in touch</p>
+          <h1>Send Us A Message</h1>
+          <p>Send us a message and we'll get back to you as soon as we can. For urgent enquiries, please reach us on our social channels below.</p>
+          <p class="contact-note">Kindly note that we are not taking reservations at the moment.</p>
+        </div>
 
-  <!-- contact strip -->
-  <section class="contact-strip">
-    <div class="contact-layout">
+        <div class="contact-form-card">
+          <form id="contact-form">
+            <label>
+              Name
+              <input type="text" placeholder="Type here..." required>
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="Type here..." required>
+            </label>
+            <label>
+              Message
+              <textarea placeholder="Type here..." required></textarea>
+            </label>
+            <button type="submit" class="btn-filled contact-submit">Send</button>
+          </form>
+        </div>
+      </div> 
+    </section> 
+  </main>
 
-      <div class="contact-copy">
-        <p class="eyebrow">Get in touch</p>
-        <h1>Send Us A Message</h1>
-        <p>Send us a message and we’ll get back to you as soon as we can. For urgent enquiries, please reach us on our social channels below.</p>
-        <p class="contact-note">Kindly note that we are not taking reservations at the moment.</p>
-      </div>
-
-      <div class="contact-form-card">
-        <form id="contact-form">
-          <label>
-            Name
-            <input type="text" placeholder="Type here..." required>
-          </label>
-
-          <label>
-            Email
-            <input type="email" placeholder="Type here..." required>
-          </label>
-
-          <label>
-            Message
-            <textarea placeholder="Type here..." required></textarea>
-          </label>
-
-          <button type="submit" class="btn-filled contact-submit">Send</button>
-        </form>
-      </div>
-
-    </div> 
-  </section> 
-
-  <!-- footer block (outside contact section) -->
-  <section class="home-footer-block">
+  <footer class="home-footer-block">
+    <h2 class="visually-hidden">Contact Information</h2>
     <div class="footer-logo-stack">
       <img src="photos/logo.png" alt="Oh My Oat logo" class="footer-logo">
       <div class="social-list">
@@ -72,18 +68,15 @@
         <span>IG · TikTok · WhatsApp</span>
       </div>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<script>
-  const form = document.getElementById('contact-form');
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    alert('Thank you! Your message has been sent.');
-    form.reset();
-  });
-</script>
-
+  <script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Thank you! Your message has been sent.');
+      form.reset();
+    });
+  </script>
 </body>
 </html>
